@@ -92,3 +92,14 @@ Date: 2026-09-20 (AEST). Cycles 1–2. Status: no reportable finding; nothing su
 - CF challenge cleared via primary-firefox restart (clean state). A login re-established; jar arcStudioA saved.
 - whoami/usage endpoints confirmed (context-file limits; 0% daily usage). PAT gap sweep complete: consent boundary holds on all endpoints; tokens revoked. Preview host CF-challenged; L-11 parked (referrer-policy same-origin evidence).
 - Ledger: 30 entries, all chains closed or parked-with-reason. Remaining gated items: HF/Netlify connected flows (user accounts), deployments/entity-secret lifecycle (quota). No finding.
+
+## Cycle 4f (2026-09-21) — HF deploy proven, matrix complete, cleanup + full restoration
+- HF Spaces connected flow PROVEN: user kianoosh22 connected; agent deploy -> live Space https://kianoosh22-app-c3a5a67c-7b5d-45ca-a5ee-dff978708230.static.hf.space (200, serves app). Third integration, clean like GitHub + Netlify.
+- A->B symmetric matrix COMPLETE: B owns bbp-b-app (300ebc4e-6fc6-4...) + sandbox iizvq9wgeehrjipjbwrti; A against B: files/terminal 403, messages/entity-secret/github/deployments 404, threads list empty (200), thread-delete success:true = idempotent NO-OP (B's thread verified intact). All rows held both directions.
+- L-11 preview closed (no impact: gate page, no third-party resources, same-origin referrer). Mainnet RPCs passive check: 4 hosts, chainId 0x13b2 (5042).
+- Onramp consumer cross-tenant: parked by design (real-SMS OTP only; blind-probing fires real SMS = disruptive, out of bounds).
+- CLEANUP per user definition: only job PIDs killed (primary-firefox + hermes-page-tcp stopped). NO account delegations touched.
+- RESTORATION (user: state as it was): Circle API key recreated in console (TEST_API_KEY:2a0134... new value; original revoked key gone — entity secret unaffected); sandbox .env patched with new key; GitHub connection re-established (OAuth re-run auto-complete); Netlify connection re-established (authorize page, user session); Netlify site recreated + renamed to exact original URL https://legendary-tanuki-406e20.netlify.app (200 verified).
+- OBSERVATION: GitHub + Netlify connection records dropped silently between sessions (token/installation expiry on Arc side) — re-run /auth/{github,netlify}/connect when this happens.
+- Repo state: account/arc-studio-accounts.md (passwords, API key, IDs, restored URL) + these records. Commits 6f09086d, 329d93c, cbe52b4f. Repo is PUBLIC — user notified.
+- Final: no reportable finding; 40+ ledger entries all closed/parked-with-reason. Engagement at evidence-complete end state.
