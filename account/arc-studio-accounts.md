@@ -18,6 +18,10 @@ Both accounts are aliases of the authorized test mailbox (ciphershadow_9).
 - App: bbp-b-app (300ebc4e-6fc6-4...)
 - Sandbox: iizvq9wgeehrjipjbwrti
 
+
+## Netlify web deploy (restored 2026-09-21)
+- Live site: https://legendary-tanuki-406e20.netlify.app
+- Original deleted during cleanup, reconnected + redeployed + renamed to the same URL.
 ## Circle API key (Standard, recreated 2026-09-21)
 - TEST_API_KEY:2a0134c53b8f292668b5774400ca7a5f:8212ca2e6d90607bf80408e806a8a5a7
 - NOTE: original key (TEST_API_KEY:fda33e...) was revoked during cleanup; this is the replacement.
